@@ -29,6 +29,8 @@ See https://github.com/catkins/qbt for more information and documentation.`,
 	viper.BindPFlag("instance", rootCmd.PersistentFlags().Lookup("instance"))
 	rootCmd.PersistentFlags().StringP("project", "p", "", "GCP project to connect to")
 	viper.BindPFlag("project", rootCmd.PersistentFlags().Lookup("project"))
+	rootCmd.PersistentFlags().BoolP("admin", "a", false, "Use an admin client (default: false)")
+	viper.BindPFlag("admin", rootCmd.PersistentFlags().Lookup("admin"))
 
 	rootCmd.AddCommand(&cobra.Command{
 		Use:   "query [table] [query]",

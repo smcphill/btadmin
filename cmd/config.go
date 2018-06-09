@@ -10,6 +10,8 @@ type Config struct {
 	Project string
 	// Instance is the BigTable instance to connect to
 	Instance string
+	// IsAdmin determines whether an admin client (with superpowers) will be used
+	IsAdmin bool
 }
 
 func loadConfig() Config {
